@@ -64,6 +64,7 @@ initializeFilters();   // <-- добавь
 
 // ===== ИНИЦИАЛИЗАЦИЯ DOM =====
 function initializeDOM() {
+    DOM.themeToggleHeader = document.getElementById('themeToggleHeader');
     DOM.themeToggle = document.querySelector('.theme-toggle');
     DOM.navbar = document.querySelector('.navbar');
     DOM.menuToggle = document.getElementById('menuToggle');
@@ -90,9 +91,9 @@ function initializeTheme() {
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     STATE.theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', STATE.theme);
-    if (DOM.themeToggle) {
-        DOM.themeToggle.addEventListener('click', toggleTheme);
-    }
+    if (DOM.themeToggleHeader) {
+    DOM.themeToggleHeader.addEventListener('click', toggleTheme);
+}
 }
 
 function toggleTheme() {
@@ -102,9 +103,9 @@ function toggleTheme() {
     if (DOM.particlesCanvas) {
         initializeParticles();
     }
-    DOM.themeToggle.style.transform = 'rotate(180deg)';
+    DOM.themeToggleHeader.style.transform = 'rotate(180deg)';
     setTimeout(() => {
-        DOM.themeToggle.style.transform = 'rotate(0)';
+        DOM.themeToggleHeader.style.transform = 'rotate(0)';
     }, 300);
 }
 
