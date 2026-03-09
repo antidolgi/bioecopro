@@ -84,12 +84,6 @@
         <canvas id="particles-canvas"></canvas>
     </div>
     
-    <!-- Переключатель темы -->
-    <button class="theme-toggle" aria-label="Переключить светлую/тёмную тему">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-    </button>
-    
     <!-- Мобильное меню -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     
@@ -119,6 +113,11 @@
                 <a href="#order" class="btn btn-primary btn-sm pulse-glow">
                     <i class="fas fa-bolt"></i> Заказать
                 </a>
+                <button class="theme-toggle-header" id="themeToggleHeader" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <span class="theme-text">Выключить свет</span>
+    </button>
             </div>
             
             <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
