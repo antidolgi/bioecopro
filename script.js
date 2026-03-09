@@ -54,6 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeScroll();
     initializeModals();
     generateCaptcha();
+initializeTabs();      // <-- добавь
+initializeFilters();   // <-- добавь
+
+setTimeout(() => {
+    document.body.classList.add('loaded');
+    startCountAnimations();
+}, 100);
     
     setTimeout(() => {
         document.body.classList.add('loaded');
