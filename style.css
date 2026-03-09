@@ -319,7 +319,7 @@ button {
     font-size: 0.9rem;
 }
 
-.nav-link::before {
+/* .nav-link::before {
     content: attr(data-hover);
     position: absolute;
     top: 0;
@@ -334,6 +334,7 @@ button {
 .nav-link:hover::before {
     width: 100%;
 }
+*/
 
 /* Кнопки */
 .btn {
@@ -583,6 +584,22 @@ button {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     margin-bottom: 40px;
+}
+/* Hero image */
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+    margin-left: 40px;
+}
+.hero-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+}
+@media (max-width: 992px) {
+    .hero-image {
+        display: none;
+    }
 }
 
 .stat {
