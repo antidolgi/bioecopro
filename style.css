@@ -197,6 +197,8 @@ button {
     transition: var(--transition-normal);
     color: var(--dark);
     font-size: 1.2rem;
+    border: 2px solid var(--primary);
+    background: var(--light);
 }
 
 .theme-toggle:hover {
