@@ -400,6 +400,53 @@ button {
 .pulse-once {
     animation: pulse-once 1s ease;
 }
+.theme-toggle-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: var(--light);
+    border: 2px solid var(--primary);
+    border-radius: var(--radius-round);
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    margin-left: 10px;
+}
+
+.theme-toggle-header:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.theme-toggle-header .fa-sun {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle-header .fa-moon {
+    display: none;
+}
+
+[data-theme="dark"] .theme-toggle-header .fa-sun {
+    display: inline-block;
+}
+
+.theme-text {
+    white-space: nowrap;
+}
+
+/* На мобильных устройствах текст можно скрыть */
+@media (max-width: 768px) {
+    .theme-text {
+        display: none;
+    }
+    .theme-toggle-header {
+        padding: 8px 12px;
+    }
+}
 
 @keyframes pulse-glow {
     0%, 100% {
