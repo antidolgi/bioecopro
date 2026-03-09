@@ -55,13 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeModals();
     generateCaptcha();
 initializeTabs();      // <-- добавь
-initializeFilters();   // <-- добавь
-
-setTimeout(() => {
-    document.body.classList.add('loaded');
-    startCountAnimations();
-}, 100);
-    
+initializeFilters();   // <-- добавь    
     setTimeout(() => {
         document.body.classList.add('loaded');
         startCountAnimations();
