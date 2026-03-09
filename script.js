@@ -783,6 +783,54 @@ window.BioEcoPro = {
     openRequisitesModal,
     closeRequisitesModal
 };
+// ===== ВКЛАДКИ УСЛУГ =====
+function initializeTabs() {
+    const tabs = document.querySelectorAll('.service-tab');
+    const contents = document.querySelectorAll('.service-content');
+    
+    if (!tabs.length || !contents.length) return;
+    
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const service = tab.dataset.service;
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            contents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === `${service}-content`) {
+                    content.classList.add('active');
+                }
+            });
+        });
+    });
+}
+
+// ===== ФИЛЬТРЫ МОДЕЛЕЙ =====
+function initializeFilters() {
+    const filters = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.model-card');
+    
+    if (!filters.length || !cards.length) return;
+    
+    filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            const category = filter.dataset.filter;
+            
+            filters.forEach(f => f.classList.remove('active'));
+            filter.classList.add('active');
+            
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}
 
 // ===== PWA =====
 if ('serviceWorker' in navigator) {
