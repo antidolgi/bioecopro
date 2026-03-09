@@ -267,8 +267,8 @@ button {
 }
 
 .logo-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -588,11 +588,23 @@ button {
     margin-bottom: 40px;
 }
 /* Hero image */
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
 .hero-image {
     flex: 1;
     max-width: 500px;
-    margin-left: 40px;
 }
+
 .hero-image img {
     width: 100%;
     border-radius: var(--radius-lg);
@@ -946,12 +958,15 @@ section {
 }
 
 .models-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
 .model-card {
+    width: 280px; /* фиксированная ширина */
+    flex-shrink: 0;
     background: var(--light);
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -1560,8 +1575,8 @@ section {
 }
 
 .footer-logo .logo-icon.small {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
 }
 
 .footer-logo .logo-text {
