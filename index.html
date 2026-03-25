@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <!-- 🔥 КЭШ-КОНТРОЛЬ -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БИОЭКОПРО — Аренда и продажа биотуалетов в Москве</title>
+    <meta name="description" content="Аренда и продажа мобильных туалетных кабин. Доставка за 2 часа, обслуживание 24/7. Опыт более 5 лет.">
+    <meta name="keywords" content="биотуалет, аренда биотуалета, продажа биотуалетов, БИОЭКОПРО, Москва, доставка">
+    
+    <!-- Preload критичных ресурсов -->
+    <link rel="preload" href="style.css?v=2.0.1" as="style">
+    <link rel="preload" href="script.js?v=2.0.1" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css?v=2.0.1">
+    
+    <!-- Иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Шрифты Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="БИОЭКОПРО — Санитарные решения для стройки и мероприятий">
+    <meta property="og:description" content="Аренда и продажа мобильных туалетных кабин в Москве и области. Доставка за 2 часа, обслуживание 24/7.">
+    <meta property="og:image" content="https://bio-ecopro.ru/assets/images/social-preview.jpg">
+    <meta property="og:url" content="https://bio-ecopro.ru">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="БИОЭКОПРО — Аренда биотуалетов">
+    <meta name="twitter:description" content="Профессиональные санитарные решения для бизнеса и мероприятий">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107246683', 'ym');
+    
+        ym(107246683, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/107246683" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+    <!-- /Yandex.Metrika counter -->
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "БИОЭКОПРО",
+        "url": "https://bio-ecopro.ru",
+        "logo": "https://bio-ecopro.ru/assets/images/logo.png",
+        "description": "Аренда и продажа мобильных туалетных кабин",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "RU",
+            "addressLocality": "Москва"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "telephone": "+7-901-717-71-11",
+        "priceRange": "₽₽",
+        "sameAs": [
+            "https://vk.com/bioecopro",
+            "https://t.me/bioecopro_bot",
+            "tel:+79017177111"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <div class="particles-container">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+    
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </button>
+    
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    
+    <nav class="navbar glass-effect">
+        <div class="container nav-container">
+            <div class="logo-wrapper">
+                <a href="#hero" class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/images/logo.png" alt="БИОЭКОПРО" id="logoImg" width="80" height="80">
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">БИО<span class="logo-accent">ЭКОПРО</span></span>
+                    </div>
+                </a>
+            </div>
+            
+            <a href="tel:+79017177111" class="header-phone">+7 (901) 717-71-11</a>
+            
+            <div class="nav-links">
+                <a href="#hero" class="nav-link"><i class="fas fa-home"></i> Главная</a>
+                <a href="#services" class="nav-link"><i class="fas fa-concierge-bell"></i> Услуги</a>
+                <a href="#catalog" class="nav-link"><i class="fas fa-tag"></i> Продажа</a>
+                <a href="#order" class="btn btn-primary btn-sm pulse-glow"><i class="fas fa-bolt"></i> Заказать</a>
+                <button class="theme-toggle-header" id="themeToggleHeader" aria-label="Переключить тему">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="theme-text">Выключить свет</span>
+                </button>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Меню" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero секция -->
+    <section id="hero" class="hero-section full-width">
+        <div class="hero-background">
+            <div class="parallax-layer" data-depth="0.1"></div>
+            <div class="parallax-layer" data-depth="0.3"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content glass-hero">
+                <div class="hero-badge">
+                    <span class="badge-icon">✅</span>
+                    <span class="badge-text">Опыт нашей команды более 5 лет</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="hero-title-line">ПРОДАЖА И АРЕНДА</span>
+                    <span class="hero-title-line accent">МОБИЛЬНЫХ ТУАЛЕТНЫХ КАБИН</span>
+                </h1>
+                
+                <p class="hero-subtitle white-text">
+                    Аренда автономных санитарных систем
+                </p>
+                <p class="hero-vip primary-text">
+                    Аренда VIP модулей
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="120">0</div>
+                            <div class="stat-label">минут доставки</div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">📞</div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">минут на ответ</div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-label">лет опыта</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg pulse-once" onclick="scrollToSection('order')">
+                        <i class="fas fa-bolt"></i> Рассчитать стоимость
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <div class="scroll-text">Листайте вниз</div>
+            <div class="scroll-icon">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши <span class="accent">услуги</span></h2>
+                <p class="section-subtitle">Выберите то, что нужно именно вам</p>
+            </div>
+            
+            <div class="services-grid" id="servicesGrid">
+                <div class="service-card" data-service="construction">
+                    <div class="service-icon">️</div>
+                    <div class="service-title">Аренда кабин для стройки</div>
+                </div>
+                <div class="service-card" data-service="event">
+                    <div class="service-icon"></div>
+                    <div class="service-title">Аренда кабин для мероприятий</div>
+                </div>
+                <div class="service-card" data-service="modules">
+                    <div class="service-icon"></div>
+                    <div class="service-title">Аренда модулей для мероприятий</div>
+                </div>
+                <div class="service-card" data-service="maintenance">
+                    <div class="service-icon"></div>
+                    <div class="service-title">Обслуживание и клининг</div>
+                </div>
+                <div class="service-card" data-service="water">
+                    <div class="service-icon"></div>
+                    <div class="service-title">Доставка технической воды</div>
+                </div>
+            </div>
+            
+            <div class="services-content" id="servicesContent"></div>
+            
+            <div class="services-disclaimer">
+                * Стоимость и условия доставки уточняйте у менеджера
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог продажи -->
+    <section id="catalog" class="catalog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Продажа <span class="accent">туалетных кабин и душевых</span></h2>
+                <p class="section-subtitle">Выберите модель для покупки</p>
+            </div>
+            
+            <div class="models-grid" id="modelsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Почему выбирают -->
+    <section id="advantages" class="advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Почему выбирают <span class="accent">БИОЭКОПРО</span></h2>
+                <p class="section-subtitle">Честно, надёжно, с заботой о вас</p>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon"><i class="fas fa-truck-fast"></i></div>
+                    <h3>Оперативная доставка</h3>
+                    <p>по Москве и Московской области в круглосуточном режиме</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Гарантия чистоты</h3>
+                    <p>Мы доставляем только чистые, прошедшие дезинфекцию, а также заправленные дезодорирующим средством туалетные кабины</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Круглосуточное обслуживание</h3>
+                    <p>Исключает проблемы с переполнением ёмкости накопительного бака</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon"><i class="fas fa-ruble-sign"></i></div>
+                    <h3>Прозрачные цены</h3>
+                    <p>Исключаем скрытые платежи и доплаты. При заказе будет указана полная стоимость за выбранный вид и объём услуг</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Оформление <span class="accent">заказа</span></h2>
+                <p class="section-subtitle">Заполните форму — мы перезвоним за 15 минут</p>
+            </div>
+            
+            <!-- Блок с выбранной моделью (появляется при выборе) -->
+            <div id="selectedModelDisplay" style="display: none; text-align: center; margin-bottom: 20px; padding: 10px; background: var(--light-gray); border-radius: var(--radius-md);">
+                <span>Вы выбрали: <strong id="selectedModelName"></strong></span>
+            </div>
+            
+            <div class="order-form-container glass-effect">
+                <form id="orderForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-group floating-label">
+                            <input type="text" id="orderName" name="name" required pattern="[А-Яа-яЁё\s]{2,}">
+                            <label for="orderName"><i class="fas fa-user"></i> Ваше имя</label>
+                            <div class="form-helper">Минимум 2 буквы</div>
+                        </div>
+                        <div class="form-group floating-label">
+                            <input type="tel" id="orderPhone" name="phone" required>
+                            <label for="orderPhone"><i class="fas fa-phone"></i> Телефон</label>
+                            <div class="form-helper">Формат: +7 999 123 45 67</div>
+                        </div>
+                        <div class="form-group floating-label">
+                            <input type="email" id="orderEmail" name="email">
+                            <label for="orderEmail"><i class="fas fa-envelope"></i> Email (необязательно)</label>
+                        </div>
+                        <div class="form-group floating-label" id="cityGroup">
+                            <select id="orderCity" name="city" required>
+                                <option value=""></option>
+                                <option value="Москва">Москва</option>
+                                <option value="Московская область">Московская область</option>
+                                <option value="other">Другой</option>
+                            </select>
+                            <label for="orderCity"><i class="fas fa-map-marker-alt"></i> Город</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group floating-label" id="otherCityGroup" style="display: none;">
+                        <input type="text" id="otherCity" name="other_city" placeholder=" ">
+                        <label for="otherCity"><i class="fas fa-city"></i> Введите город</label>
+                    </div>
+                    
+                    <div class="form-group floating-label">
+                        <textarea id="orderMessage" name="message" rows="3" placeholder=" "></textarea>
+                        <label for="orderMessage"><i class="fas fa-comment-dots"></i> Дополнительные пожелания</label>
+                        <div class="char-counter"><span id="charCount">0</span>/500</div>
+                    </div>
+
+                    <div class="form-group captcha-group">
+                        <label class="captcha-label">Проверка: <span id="captchaQuestion"></span></label>
+                        <input type="text" id="captchaAnswer" name="captcha" required placeholder="Введите число" class="captcha-input">
+                        <input type="hidden" id="captchaResult" name="captcha_result">
+                        <div class="form-helper">Решите пример, чтобы подтвердить, что вы не робот</div>
+                    </div>
+                    
+                    <input type="hidden" name="selected_model" id="selectedModel" value="">
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="orderAgreement" name="agreement" required>
+                            <span class="checkmark"></span>
+                            <span>Я соглашаюсь с <a href="#" onclick="openPrivacyModal(); return false;">политикой конфиденциальности</a></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-block btn-submit">
+                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Отправить заявку</span>
+                            <div class="btn-loading"><div class="spinner"></div><span>Отправка...</span></div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Часто задаваемые <span class="accent">вопросы</span></h2>
+                <p class="section-subtitle">Ответы на самые популярные вопросы</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="question-text">Входит ли в стоимость доставка (монтаж/демонтаж) и обслуживание?</span>
+                        <span class="question-icon"><i class="fas fa-plus"></i><i class="fas fa-minus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Стоимость доставки зависит от локации монтажа, точную стоимость Вам сообщит ваш персональный менеджер. Обслуживание входит в стоимость аренды туалетной кабины по выбранному тарифу: 1 раз в месяц, 2 раза в месяц, 1 раз в неделю, 2 раза в неделю.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="question-text">Можно ли использовать мобильную туалетную кабину в зимний период?</span>
+                        <span class="question-icon"><i class="fas fa-plus"></i><i class="fas fa-minus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, можно использовать, туалетная кабина заправляется противогололедным реагентом в зимний период. Также БИОЭКОПРО предлагает арендовать мобильные туалетные кабины с обогревателем или автономные санитарные комплексы для зимнего использования.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="question-text">Вы доставляете туалетные модули, туалетные трейлеры и туалетные кабины для проведения мероприятий по всей России?</span>
+                        <span class="question-icon"><i class="fas fa-plus"></i><i class="fas fa-minus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Да, отдел по поддержке мероприятий работает по всей территории России.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="question-text">Какие документы вы предоставляете?</span>
+                        <span class="question-icon"><i class="fas fa-plus"></i><i class="fas fa-minus"></i></span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Мы предоставляем полный пакет документов: лицензию, договор продажи или аренды, первичную документацию.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Наши <span class="accent">контакты</span></h2>
+                <p class="section-subtitle">Всегда на связи</p>
+            </div>
+            
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <h3>Телефон</h3>
+                    <div class="contact-info">
+                        <a href="tel:+79017177111" class="contact-link">+7-901-717-71-11</a>
+                        <p>Работа офиса: 9:00 – 18:00</p>
+                        <p>Обеспечение мероприятий: круглосуточно</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <div class="contact-info">
+                        <a href="mailto:info@bio-ecopro.ru" class="contact-link">info@bio-ecopro.ru</a>
+                        <p>Для коммерческих предложений</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Режим работы</h3>
+                    <div class="contact-info">
+                        <div class="schedule-item">
+    <h5>Отдел продаж</h5>
+    <p class="work-time">9:00–18:00</p>
+    <h5>Поддержка мероприятий</h5>
+    <p class="hours">24/7</p>
+</div>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>География</h3>
+                    <div class="contact-info">
+                        <div class="contact-region">Москва и МО</div>
+                        <p>Мероприятия по всей РФ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <div class="logo-icon small">
+                            <img src="assets/images/logo.png" alt="БИОЭКОПРО" width="40" height="40">
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">БИО<span class="logo-accent">ЭКОПРО</span></span>
+                        </div>
+                    </div>
+                    <p class="footer-tagline">Санитарные системы для мероприятий<br>VIP санитарные системы</p>
+                    <p class="footer-geo">География: Москва и Московская область</p>
+                    <p class="footer-events">Проведение мероприятий по всей России</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Услуги</h4>
+                        <a href="#services" onclick="window.BioEcoPro.setService('construction'); return false;">Аренда кабин для стройки</a>
+                        <a href="#services" onclick="window.BioEcoPro.setService('event'); return false;">Аренда кабин для мероприятий</a>
+                        <a href="#services" onclick="window.BioEcoPro.setService('modules'); return false;">Аренда модулей для мероприятий</a>
+                        <a href="#services" onclick="window.BioEcoPro.setService('maintenance'); return false;">Обслуживание и клининг</a>
+                        <a href="#services" onclick="window.BioEcoPro.setService('water'); return false;">Доставка технической воды</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Контакты</h4>
+                        <a href="tel:+79017177111"><i class="fas fa-phone"></i> +7-901-717-71-11</a>
+                        <a href="mailto:info@bio-ecopro.ru"><i class="fas fa-envelope"></i> info@bio-ecopro.ru</a>
+                        <div class="work-hours">
+                            <p><i class="fas fa-clock"></i> Отдел продаж: 9:00–18:00</p>
+                            <p><i class="fas fa-calendar-alt"></i> Поддержка мероприятий: 24/7</p>
+                        </div>
+                        
+                        <!-- Соцсети в футере -->
+                        <div class="social-links-footer">
+    <a href="https://max.ru/chat/bioecopro" class="social-link" target="_blank" rel="noopener" aria-label="MAX">
+        <img src="assets/icons/MAX.svg" alt="MAX" width="20" height="20">
+    </a>
+    <a href="https://t.me/bioecopro_bot" class="social-link" target="_blank" rel="noopener" aria-label="Telegram">
+        <img src="assets/icons/telegram.svg" alt="Telegram" width="20" height="20">
+    </a>
+    <a href="tel:+79017177111" class="social-link" aria-label="Телефон">
+        <img src="assets/icons/phone.svg" alt="Phone" width="20" height="20">
+        </a>
+</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 БИОЭКОПРО. Более 5 лет успешной работы.</p>
+                    <p class="dev-credit">
+                        <i class="fas fa-leaf" style="color: #f1c40f;"></i>
+                        <a href="https://antidolgi.github.io/banan817/" target="_blank" style="color: #f1c40f; text-decoration: none;">Банановое агентство 817</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="successModal">
+        <div class="modal-content success-animation">
+            <div class="success-check">
+                <svg class="checkmark" viewBox="0 0 52 52">
+                    <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                </svg>
+            </div>
+            <h3>Заявка принята!</h3>
+            <p>Наш менеджер свяжется с вами в течение 15 минут для уточнения деталей заказа.</p>
+            <button class="btn btn-primary" onclick="closeSuccessModal()">
+                <i class="fas fa-check"></i> Отлично!
+            </button>
+        </div>
+    </div>
+    
+    <div class="modal" id="privacyModal">
+        <div class="modal-content privacy-content">
+            <div class="modal-header">
+                <h3>Политика конфиденциальности</h3>
+                <button class="modal-close" onclick="closePrivacyModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Настоящая Политика конфиденциальности персональных данных (далее – Политика) действует в отношении всей информации, которую ООО «БИОЭКОПРО» (ИНН 7751384522, ОГРН 1267700059681, Генеральный директор Камалов Роман Монирович) может получить о пользователе во время использования им сайта https://bio-ecopro.ru.</p>
+                <p><strong>1. Определение терминов</strong><br>1.1. Персональные данные — любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).<br>1.2. Обработка персональных данных — любое действие с персональными данными.</p>
+                <p><strong>2. Цели сбора персональных данных</strong><br>Мы собираем и храним только те персональные данные, которые необходимы для оказания услуг: имя, телефон, email, город. Эти данные используются для связи с вами, оформления заказа и информирования о статусе заявки.</p>
+                <p><strong>3. Условия обработки</strong><br>Обработка осуществляется с согласия пользователя. Мы не передаем персональные данные третьим лицам, кроме случаев, предусмотренных законодательством РФ.</p>
+                <p><strong>4. Защита данных</strong><br>Мы принимаем необходимые организационные и технические меры для защиты персональных данных от неправомерного доступа.</p>
+                <p><strong>5. Заключительные положения</strong><br>Пользователь может отозвать свое согласие на обработку персональных данных, направив письмо на info@bio-ecopro.ru. Настоящая Политика действует бессрочно до замены новой версией.</p>
+                <p><em>Дата публикации: 09.03.2026</em></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="contractModal">
+        <div class="modal-content privacy-content">
+            <div class="modal-header">
+                <h3>Типовой договор аренды биотуалета</h3>
+                <button class="modal-close" onclick="closeContractModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>ДОГОВОР АРЕНДЫ №_______</strong><br>г. Москва «___» __________ 2026 г.</p>
+                <p>ООО «БИОЭКОПРО» (ИНН 7751384522, ОГРН 1267700059681), именуемое в дальнейшем «Арендодатель», в лице Генерального директора Камалова Романа Монировича, действующего на основании Устава, с одной стороны, и ______________________________ (ФИО или наименование), именуемое в дальнейшем «Арендатор», с другой стороны, заключили настоящий договор о нижеследующем:</p>
+                <p><strong>1. Предмет договора</strong><br>1.1. Арендодатель предоставляет Арендатору во временное владение и пользование мобильную туалетную кабину (далее – Оборудование) согласно спецификации (Приложение №1), а Арендатор обязуется принять Оборудование, своевременно вносить арендную плату и вернуть Оборудование в исправном состоянии.</p>
+                <p><strong>2. Срок аренды</strong><br>2.1. Срок аренды устанавливается с «___»__________2026 г. по «___»__________2026 г. включительно.</p>
+                <p><strong>3. Арендная плата</strong><br>3.1. Арендная плата составляет _______ рублей в сутки. Общая сумма договора _______ рублей. НДС не облагается.<br>3.2. Арендатор вносит предоплату в размере 100% до момента передачи Оборудования.</p>
+                <p><strong>4. Права и обязанности сторон</strong><br>(Далее идут стандартные пункты: порядок передачи, ответственность, форс-мажор и т.д.)</p>
+                <p><strong>5. Реквизиты сторон</strong><br><strong>Арендодатель:</strong> ООО «БИОЭКОПРО», ИНН 7751384522, КПП 775101001, ОГРН 1267700059681, адрес: г. Москва, ...<br><strong>Арендатор:</strong> ______________________________________________</p>
+                <p><em>Полный текст договора будет предоставлен при оформлении заказа. Данный документ является ознакомительным.</em></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="requisitesModal">
+        <div class="modal-content privacy-content">
+            <div class="modal-header">
+                <h3>Реквизиты компании</h3>
+                <button class="modal-close" onclick="closeRequisitesModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>ООО «БИОЭКОПРО»</strong></p>
+                <p>ИНН: 7751384522<br>КПП: 775101001<br>ОГРН: 1267700059681<br>Дата присвоения ОГРН: 24.02.2026</p>
+                <p>Генеральный директор: Камалов Роман Монирович</p>
+                <p>Юридический адрес: г. Москва, (уточнить)</p>
+                <p>Банковские реквизиты будут предоставлены по запросу.</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх"><i class="fas fa-chevron-up"></i></button>
+    <div class="page-progress" id="pageProgress"><div class="progress-bar" id="progressBar"></div></div>
+
+    <script src="script.js?v=2.0.1"></script>
+    <link rel="manifest" href="manifest.json">
+    <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js');</script>
+</body>
+</html>

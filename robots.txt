@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /*.txt$
+Disallow: /send-form.php
+
+Sitemap: https://bio-ecopro.ru/sitemap.xml
+Host: https://bio-ecopro.ru
